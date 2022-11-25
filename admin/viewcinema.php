@@ -25,16 +25,16 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">CINEMA DETAILS</h5>
-                            <b><a href="addcinema.php" style="color: gray;">ADD CINEMA</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">RẠP</h5>
+                            <b><a href="addcinema.php" style="color: gray;">ADD RẠP</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
-                                        <th>LOCATION</th>
-                                        <th>CITY</th>
+                                        <th>TÊN</th>
+                                        <th>ĐỊA ĐIỂM</th>
+                                        <th>THÀNH PHỐ</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>
@@ -50,6 +50,7 @@
                                                         <td><?php echo $row["city"]; ?></td>
 
                                                         <td>
+                                                           
                                                             <a href="editcinema.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">EDIT</a> |
                                                             <a href="deletecinema.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">DELETE</a>
                                                         </td>

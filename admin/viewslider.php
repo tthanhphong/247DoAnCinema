@@ -25,7 +25,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >SLIDER DETAILS</h5>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT SLIDERS</h5>
                             <b><a href="addslider.php" style="color: gray;">ADD SLIDER</a></b>
 
                             <table class="table mt-5" border="1">

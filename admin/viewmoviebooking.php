@@ -32,11 +32,11 @@
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;"> 
                                         <th>ID</th>     
-                                        <th>FULL NAME</th>
+                                        <th>TÊN</th>
                                         <th>ID SHOW</th>
-                                        <th>NUMBER OF TICKET</th>
-                                        <th>BOOKING DATE</th>
-                                        <th>TOTAL</th>
+                                        <th>SỐ LƯỢNG VÉ</th>
+                                        <th>NGÀY ĐẶT VÉ</th>
+                                        <th>TỔNG</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

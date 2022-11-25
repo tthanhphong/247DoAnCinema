@@ -25,15 +25,15 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >SEAT RESERVED DETAILS</h5>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT GHÊ ĐẶT TRƯỚC</h5>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>CUSTOMER NAME</th>
-                                        <th>SEAT NUMBER</th>
-                                        <th>STATUS</th>
+                                        <th>KHÁCH HÀNG</th>
+                                        <th>CHI TIẾT GHẾ</th>
+                                        <th>TRẠNG THÁI</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

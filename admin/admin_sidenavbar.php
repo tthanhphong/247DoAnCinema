@@ -25,10 +25,10 @@
                 <a class="nav-link" href="viewmovie.php" style="color: white;"><b>QUẢN LÝ PHIM </b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="viewseatdetail.php" style="color: white;"><b>QUẢN LÝ CHI TIẾT GHẾ</b></a>
+                <a class="nav-link" href="viewseatdetail.php" style="color: white;"><b>QUẢN LÝ SỐ GHÊ</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="viewseatreserved.php" style="color: white;"><b>QUẢN LÝ GHÊ ĐẶT TRƯỚC</b></a>
+                <a class="nav-link" href="viewseatreserved.php" style="color: white;"><b>QUẢN LÝ CHI TIẾT GHẾ</b></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="viewmovieshow.php" style="color: white;"><b>QUẢN LÝ SHOW</b></a>

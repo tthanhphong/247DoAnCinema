@@ -72,7 +72,7 @@
                                                 <label for="exampleInputEmail1">SELECT IMAGE</label>
                                                 <input type="file" name="fileToUpLoad" id="fileToUpLoad" value=" <?php echo $imgsrc; ?>" required>  
                                             </div>
-                                                <img src="../<?php echo $imgsrc; ?>" style="height: 150px;" />
+                                                <img src="../<?php echo $imgsrc; ?>" alt="<?php echo $alt; ?>" style="height: 150px;" />
                                             <br><br>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">ALTERNATE TEXT</label>

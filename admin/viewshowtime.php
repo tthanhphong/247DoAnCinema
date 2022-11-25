@@ -25,8 +25,8 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >SHOW TIME DETAILS</h5>
-                            <b><a href="addlanguage.php" style="color: gray;">ADD SHOW TIME</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >THỜI GIAN SHOW</h5>
+                            <b><a href="addshowtime.php" style="color: gray;">ADD THỜI GIAN SHOW</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">   

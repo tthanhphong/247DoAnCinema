@@ -25,14 +25,14 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >GENRE DETAILS</h5>
-                            <b><a href="addgenre.php" style="color: gray;">ADD GENRE</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >THỂ LOẠI</h5>
+                            <b><a href="addgenre.php" style="color: gray;">ADD THỂ LOẠI</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>TÊN</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

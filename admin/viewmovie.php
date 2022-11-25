@@ -30,19 +30,19 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >MOVIE DETAILS</h5>
-                            <b><a href="addmovie.php" style="color: gray;">ADD MOVIE</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >PHIMS</h5>
+                            <b><a href="addmovie.php" style="color: gray;">ADD PHIM</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>BANNER</th>
-                                        <th>NAME</th>
-                                        <th>RELEASE DATE</th>
-                                        <th>INDUSTRY</th>
-                                        <th>GENRE</th>
-                                        <th>LANGUAGE</th>
-                                        <th>MOVIE DURATION </th>
+                                        <th>TÊN</th>
+                                        <th>NGÀY PHÁT HÀNH</th>
+                                        <th>QUỐC GIA</th>
+                                        <th>THỂ LOẠI</th>
+                                        <th>NGÔN NGỮ</th>
+                                        <th>THỜI LƯỢNG</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

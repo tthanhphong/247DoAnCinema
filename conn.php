@@ -40,6 +40,31 @@ use LDAP\Result;
             $result = $this->conn->query($sql);
             return $result;
         }
+        
+        function select_show_dt1(){
+
+            $sql = "SELECT 247cinema.movie.id, industry.industry_name AS 'industry_name'
+            FROM 247cinema.movie, industry
+            WHERE 247cinema.movie.industry_id = industry.id;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+        function select_show_dt2(){
+
+            $sql = "SELECT DISTINCT genre.genre_name AS 'genre_name' 
+            FROM movie,genre
+            WHERE 247cinema.movie.genre_id = genre.id;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+        function select_show_dt3(){
+
+            $sql = "SELECT DISTINCT language.language_name AS 'language_name' 
+            FROM movie,language
+            WHERE 247cinema.movie.lang_id = language.id;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
 
         function select_movie($table_name, $date){
 

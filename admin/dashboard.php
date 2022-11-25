@@ -8,7 +8,7 @@
         include("../admin/admin_header.php");
     ?>
         
-            
+        
         <section>
             <nav class="continer">
                     <div class="row">
@@ -17,8 +17,8 @@
                             include("../admin/admin_sidenavbar.php");
                             ?>
                         </div>
-                        <div class="col-md-10">
-                            <h3 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >ADMIN DASHBOARD</h3>
+                        <div class="col-md-9">
+                        <h3 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >ADMIN DASHBOARD</h3>
                         </div>
                     </div>
                 </nav>

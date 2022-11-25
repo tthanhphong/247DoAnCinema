@@ -25,14 +25,14 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >LANGUAGE DETAILS</h5>
-                            <b><a href="addlanguage.php" style="color: gray;">ADD LANGUAGE</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >NGÔN NGỮ</h5>
+                            <b><a href="addlanguage.php" style="color: gray;">ADD NGÔN NGỮ</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">   
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>TÊN</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

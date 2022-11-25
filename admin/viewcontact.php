@@ -25,18 +25,18 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">CONTACT DETAILS</h5>
-                            <b><a href="addcustomer.php" style="color: gray;">ADD CONTACT</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">LIÊN HỆ</h5>
+                            <b><a href="addcustomer.php" style="color: gray;">ADD LIÊN HỆ</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>TÊN</th>
                                         <th>EMAIL</th>
-                                        <th>NO. PHONE</th>
-                                        <th>CONTENT MESSAGE</th>
-                                        <th>MESSAGE_FATE</th>
+                                        <th>SĐT</th>
+                                        <th>NỘI DUNG MESSAGE</th>
+                                        <th>NGÀY LIÊN HỆ</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

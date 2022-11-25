@@ -9,8 +9,6 @@ session_start();
 
 $con = new connec();
  $result = $con->select_show_dt(); 
- 
- 
  $checked_value=0;
 
 if(isset($_POST["btn_booking"])){

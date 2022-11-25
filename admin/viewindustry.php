@@ -25,14 +25,14 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >INDUSTRY DETAILS</h5>
-                            <b><a href="addindustry.php" style="color: gray;">ADD INDUSTRY</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >QUỐC GIA</h5>
+                            <b><a href="addindustry.php" style="color: gray;">ADD QUỐC GIA</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>TÊN</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

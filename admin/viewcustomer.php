@@ -25,17 +25,17 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CUSTOMER DETAILS</h5>
-                            <b><a href="addcustomer.php" style="color: gray;">ADD CUSTOMER</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >NGƯỜI DÙNG</h5>
+                            <b><a href="addcustomer.php" style="color: gray;">ADD NGƯỜI DÙNG</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>TÊN</th>
                                         <th>PASSWORD</th>
                                         <th>EMAIL</th>
-                                        <th>ADDRESS</th>
+                                        <th>ĐỊA CHỈ</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>

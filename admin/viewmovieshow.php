@@ -28,19 +28,19 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >SEAT DETAILS</h5>
-                            <b><a href="addseat_detail.php" style="color: gray;">BOOK SEAT</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT SHOW</h5>
+                            <b><a href="addmovieshow.php" style="color: gray;">THÊM SHOW</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>SHOW DATE</th>
-                                        <th>TICKET PRICE</th>
-                                        <th>NUMBER OF SEAT</th>
-                                        <th>NAME MOVIE</th>
-                                        <th>TIME</th>
-                                        <th>NAME CINEMA</th>
+                                        <th>NGÀY PHÁT HÀNH SHOW</th>
+                                        <th>GIÁ VÉ</th>
+                                        <th>SỐ LƯỢNG GHẾ</th>
+                                        <th>TÊN PHIM</th>
+                                        <th>THỜI LƯỢNG</th>
+                                        <th>TÊN RẠP</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>
@@ -57,7 +57,7 @@
                                                         <td><?php echo $row["movie_name"]; ?></td>
                                                         <td><?php echo $row["time"]; ?></td>
                                                         <td><?php echo $row["name"]; ?></td>
-
+                                                        
                                                         <td>
                                                             <a href="editseat.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">EDIT</a> |
                                                             <a href="deleteseat.php?id=" class="btn btn-danger">DELETE</a>

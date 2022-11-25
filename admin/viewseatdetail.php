@@ -32,16 +32,16 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >SEAT DETAILS</h5>
-                            <b><a href="addseat_detail.php" style="color: gray;">BOOK SEAT</a></b>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT GHẾ</h5>
+                
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
                                         <th>ID</th>
-                                        <th>CUSTOMER NAME</th>
-                                        <th>NUMBER OF SEAT DETAIL</th>
-                                        <th>MOVIE NAME</th>
+                                        <th>KHÁCH HÀNG</th>
+                                        <th>SỐ LƯỢNG GHẾ</th>
+                                        <th>TÊN PHIM</th>
                                         <th>ACTION</th>
                                     </tr>
                                 </thead>
