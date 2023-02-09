@@ -18,10 +18,10 @@
     if(empty($_SESSION["username"])){
         
             $_SESSION["ul"] = '<li class="nav-item" style="font-family: Montserrat, sans-serif;">
-            <a class="nav-link" data-toggle="modal" data-target="#modelId0" style="color: white;">REGISTER</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modelId0" style="color: white;">ĐĂNG KÝ</a>
             </li>   
             <li class="nav-item" style="font-family: Montserrat, sans-serif;">
-            <a class="nav-link" data-toggle="modal" data-target="#modelId1" style="color: white;">LOGIN</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modelId1" style="color: white;">ĐĂNG NHẬP</a>
             </li>';
     }
 
@@ -39,7 +39,7 @@
                 $_SESSION["username"] = $row["fullname"];
                 $_SESSION["cust_id"] = $row["id"];
                 
-                $_SESSION["ul"] = '<li class="nav-item"><a class="nav-link"style="color: white;">Hello, '.$_SESSION["username"].'</a></li><li class="nav-item"><a class="nav-link" href="index.php?action=logout" style="color: white;">LOGOUT</a></li>';
+                $_SESSION["ul"] = '<li class="nav-item"><a class="nav-link"style="color: white;">Hello, '.$_SESSION["username"].'</a></li><li class="nav-item"><a class="nav-link" href="index.php?action=logout" style="color: white;"><b>ĐĂNG XUẤT</b></a></li>';
             }else{
                 echo '<script> alert("Invalid Password");</script>';
             }
@@ -97,11 +97,11 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId" style="align-items: center;">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font-family: Montserrat, sans-serif;" >
             <li class="nav-item">
-                <a class="nav-link" href="index.php" style="color: white; margin-right:10px;">TRANG CHỦ</a>
+                <a class="nav-link" href="index.php" style="color: white; margin-right:10px;"><b>TRANG CHỦ</b></a>
             </li>
             
             <li class="nav-item dropdown" style="margin-right:10px;">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;"><i class="fas fa-money-bill-wave-alt"></i>PHIM</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;"><i class="fas fa-money-bill-wave-alt"></i><b>PHIM</b></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="commingsoon.php">PHIM SẮP CHIẾU</a>
                     <a class="dropdown-item" href="nowshowing.php">PHIM ĐANG CHIẾU</a>
@@ -109,19 +109,19 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="offers.php" style="color: white; margin-right:10px;">TIN KHUYẾN MÃI</a>
+                <a class="nav-link" href="offers.php" style="color: white; margin-right:10px;"><b>TIN KHUYẾN MÃI</b></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="booking.php" style="color: white; margin-right:10px;">MUA VÉ</a>
+                <a class="nav-link" href="booking.php" style="color: white; margin-right:10px;"><b>MUA VÉ</b></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="about.php" style="color: white; margin-right:10px;">VỀ CHÚNG TÔI</a>
+                <a class="nav-link" href="about.php" style="color: white; margin-right:10px;"><b>VỀ CHÚNG TÔI</b></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="contact.php" style="color: white; margin-right:10px;">LIÊN HỆ</a>
+                <a class="nav-link" href="contact.php" style="color: white; margin-right:10px;"><b>LIÊN HỆ</b></a>
             </li>
             
         </ul>
@@ -170,10 +170,10 @@
                     <div class="container">
                         <center>
                             <h1>
-                                 Customer Register
+                                Đăng Ký
                             </h1>
                             <p>
-                                Please fill this form to create an account.
+                               Vui lòng nhập đầy đủ thông tin.
                             </p>
                         </center>
                     </div>
@@ -228,10 +228,10 @@
                 <div class="container-fluid">
                 <center>
                     <h1>
-                        Login
+                        Đăng Nhập
                     </h1>
                     <p>
-                        Please fill this form to login.
+                       Vui lòng nhập đầy đủ thông tin
                     </p>
                 </center>
                 </div>

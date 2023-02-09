@@ -1,18 +1,26 @@
 <?php 
     session_start();
-    
-       
-    if(isset($_POST["btn_addmovie"])){
 
-        $name = $_POST["name"];
-        $movie_desc = $_POST["movie_desc"];
-        $rel_date = $_POST["rel_date"];
-        $industry_id = $_POST["industry_id"];
-        $genre_id = $_POST["genre_id"];
-        $lang_id = $_POST["lang_id"];
-        $duration = $_POST["duration"];
-       
-         
+    $imgsrc="";
+    $name="";
+    $rel_date="";
+    $movie_desc="";
+    $industry_id="";
+    $genre_id="";
+    $lang_id="";
+    $duration="";
+
+    if(isset($_POST["btn_editmovie"])){
+
+        $name= $_POST["name"];
+        $rel_date= $_POST["rel_date"];
+        $movie_desc= $_POST["movie_desc"];
+        $industry_id= $_POST["industry_id"];
+        $genre_id= $_POST["genre_id"];
+        $lang_id= $_POST["lang_id"];
+        $duration= $_POST["duration"];
+
+
         $target_dir = "images/";
         $target_file = $target_dir.$_FILES["fileToUpLoad"]["name"];
         
@@ -25,33 +33,46 @@
         if(move_uploaded_file($_FILES["fileToUpLoad"]["tmp_name"], $target_file_01)){  
 
             include("../conn.php");
-            $con = new connec();
-            // $sql = "insert into movie values (0,'$name','$target_file','$movie_desc','$rel_date',$industry_id,$genre_id,$lang_id,'$duration');";
-            $sql = "INSERT INTO `movie`(`id`, `name`, `movie_banner`, `movie_desc`, `rel_date`, `industry_id`, `genre_id`, `lang_id`, `duration`) VALUES (0, '$name', '$target_file', '$movie_desc', '$rel_date', $industry_id, $genre_id, '$lang_id', '$duration');";
-
-            $con->insert($sql,"Record Inserted");
+            $id = $_GET["id"];  
+            $con=new connec();
+            $sql = "update movie SET name='$name', movie_banner='$target_file', movie_desc='$movie_desc', rel_date='$rel_date', industry_id='$industry_id', genre_id='$genre_id', lang_id='$lang_id', duration='$duration' WHERE id=$id;";
+            $con ->update($sql,"Record Update");
             header("location:viewmovie.php");  
 
-        }else{
-            echo "Sorry, there was an error uploading your file.";
         }
-        
-
     }
+    
+
 
     if(empty($_SESSION["admin_username"])){
         header("location:index.php");
     }else{
 
-        include("admin_header.php");
+        include("../admin/admin_header.php");
 
-        $con = new connec();
-        
+        if(isset($_GET["id"])){
+            $id = $_GET["id"];
+            $con = new connec();
+            $tbl = "movie";
+            $result = $con->select($tbl,$id);
+            
+            if($result ->num_rows > 0){
+                $row = $result->fetch_assoc();
+
+                $imgsrc = $row["movie_banner"];
+                $name= $row["name"];
+                $rel_date= $row["rel_date"];
+                $movie_desc= $row["movie_desc"];
+                $industry_id= $row["industry_id"];
+                $genre_id= $row["genre_id"];
+                $lang_id= $row["lang_id"];
+                $duration= $row["duration"];
+            }
+            
+        }
 
     ?>  
 
-        
-            
         <section>
             <div class="container-fluid">   
                     <div class="row">
@@ -61,28 +82,31 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">ADD SLIDER</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;"><b>UPDATE MOVIE</b></h4>
                             <form method="post" enctype="multipart/form-data" class="mt-5">
                                 <div class="container">
                                     
                                     <hr>
-                                        <!-- form add slider -->
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">TÊN PHIM</label>
-                                                <input type="text" name="name" class="form-control" placeholder="Enter alternate text" required>
-                                            </div>
+                                        <!-- form update slider -->
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">CHỌN ẢNH</label>
-                                                <input type="file" name="fileToUpLoad" id="fileToUpLoad" required>
+                                                <input type="file" name="fileToUpLoad" id="fileToUpLoad" value=" <?php echo $imgsrc; ?>" required>  
+                                            </div>
+                                                <img src="../<?php echo $imgsrc; ?>" alt="<?php echo $alt; ?>" style="height: 150px;"/>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">TÊN PHIM</label>
+                                                <input type="text" name="name" class="form-control" placeholder="Enter text" value="<?php echo $name; ?>" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">MÔ TẢ PHIM</label>
-                                                <input type="text" name="movie_desc" class="form-control" placeholder="Enter alternate text" required>
+                                                <label for="exampleInputPassword1">NGÀY PHÁT HÀNH</label>
+                                                <input type="date" name="rel_date" class="form-control" placeholder="Enter text" value="<?php echo $rel_date; ?>" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">NGÀY ĐẶT VÉ</label>
-                                                <input type="date" name="rel_date" class="form-control" placeholder="Enter alternate text" required>
+                                                <label for="exampleInputPassword1">NỘI DUNG</label>
+                                                <input type="textarea" name="movie_desc" class="form-control" placeholder="Enter text" value="<?php echo $movie_desc; ?>" required>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">QUỐC GIA</label>
                                                 <!-- <input type="text" name="show_id" class="form-control" required > -->
@@ -117,7 +141,7 @@
                                                     // $genre = $con->select("genre",$row["genre_id"]);
                                                     // $genrerow = $genre->fetch_assoc();
                                                     //     <p><b>Genere      :</b><?php echo $genrerow["genre_name"];
-                                                            $result = $con->select_movie_genre(); 
+                                                    $result = $con->select_movie_genre(); 
                                                         if($result->num_rows>0){
                                                             while($row = $result->fetch_assoc()){
 
@@ -131,8 +155,6 @@
                                                     ?>
                                                 </select>
                                             </div>
-                                            
-
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">NGÔN NGỮ</label>
                                                 <!-- <input type="text" name="show_id" class="form-control" required > -->
@@ -161,10 +183,11 @@
 
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">THỜI LƯỢNG</label>
-                                                <input type="text" name="duration" class="form-control" placeholder="Enter alternate text" required>
+                                                <input type="text" name="duration" class="form-control" placeholder="Enter text" value="<?php echo $duration; ?>" required>
                                             </div>
                                             <div class="modal-group" style="text-align: right;">
-                                                <button type="submit" name="btn_addmovie" class="btn" style="background-image: linear-gradient(to right, #bdc3c7, #2c3e50); color:white;">Insert</button>
+                                                <button type="submit" name="btn_cancelmovie"class="btn btn-danger" style="color:white;">Cancel</button>
+                                                <button type="submit" name="btn_editmovie" class="btn" style="background-image: linear-gradient(to right, #bdc3c7, #2c3e50); color:white;">Update</button>
                                             </div>
                                  </div>
                              </form>

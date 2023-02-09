@@ -1,22 +1,18 @@
 <?php 
     session_start();
-    $n = "";
-    $l = "";
-    $c = "";
+    $time = "";
        
-    if(isset($_POST["btn_editcinema"])){
+    if(isset($_POST["btn_editshowtime"])){
 
         include("../conn.php");
         
-        $name = $_POST["cinema_name_txt"];
-        $location = $_POST["cinema_location_name"];
-        $city = $_POST["cinema_city"];
+        $showtime = $_POST["showtime"];
 
         $id = $_GET["id"];  
         $con = new connec();
-        $sql = "update cinema set name= '$name', location= '$location', city= '$city' WHERE id=$id;";
+        $sql = "update show_time set time= '$showtime' WHERE id=$id;";
         $con ->update($sql,"Record Update");
-        header("location:viewcinema.php");
+        header("location:viewshowtime.php");
     }
     
     if(empty($_SESSION["admin_username"])){
@@ -29,13 +25,12 @@
 
             $id = $_GET["id"];
             $con = new connec();
-            $tbl = "cinema";
+            $tbl = "show_time";
             $result = $con->select($tbl,$id);
             if($result ->num_rows > 0){
                 $row = $result->fetch_assoc();
-                $n = $row["name"];
-                $l = $row["location"];
-                $c = $row["city"];
+
+                $time = $row["time"];
 
             }
         }
@@ -57,21 +52,12 @@
                 <div class="container-fluid">
                     </div>
                     <hr>
-                        <!-- form login -->
                             <div class="form-group">
-                                <label for="exampleInputEmail1">CINEMA NAME</label>
-                                <input type="text" name="cinema_name_txt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Cinema Name" value="<?php echo $n; ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">CINEMA LOCATION</label>
-                                <input type="text" name="cinema_location_name" class="form-control" id="exampleInputPassword1" placeholder="Enter Cinema Location" value="<?php echo $l;?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">CITY</label>
-                                <input type="text" name="cinema_city" class="form-control" id="exampleInputPassword1" placeholder="City" value="<?php echo $c;?>">
+                                <label for="exampleInputEmail1">THỜI GIAN SHOW</label>
+                                <input type="text" name="showtime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Show Time"value="<?php echo $time; ?>">
                             </div>
                             <div class="modal-group" style="text-align: right;">
-                                <button type="submit" name="btn_editcinema" class="btn" style="background-image: linear-gradient(to right, #bdc3c7, #2c3e50); color:white;">Update</button>
+                                <button type="submit" name="btn_editshowtime" class="btn" style="background-image: linear-gradient(to right, #bdc3c7, #2c3e50); color:white;">UPDATE</button>
                             </div>
                     </form>
                         </div>

@@ -25,7 +25,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >QUỐC GIA</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>QUỐC GIA</b></h4>
                             <b><a href="addindustry.php" style="color: gray;">ADD QUỐC GIA</a></b>
 
                             <table class="table mt-5" border="1">

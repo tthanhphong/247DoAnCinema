@@ -71,7 +71,7 @@ if(isset($_POST["btn_booking"])){
         var st=seat.length;
         document.getElementById('no_ticket').value=st;
 
-        var total ="Rs. " +(st * 400);
+        var total ="" +(st * 400);
         $('#price_details').text(total);
 
         // $('#seat_details').text(seat.join(", "));

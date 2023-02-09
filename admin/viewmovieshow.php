@@ -28,13 +28,12 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT SHOW</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>CHI TIẾT SHOW</b></h4>
                             <b><a href="addmovieshow.php" style="color: gray;">THÊM SHOW</a></b>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">
                                     <tr style="color: white;">
-                                        <th>ID</th>
                                         <th>NGÀY PHÁT HÀNH SHOW</th>
                                         <th>GIÁ VÉ</th>
                                         <th>SỐ LƯỢNG GHẾ</th>
@@ -50,17 +49,18 @@
                                             while($row = $result->fetch_assoc()){
                                                 ?>  
                                                     <tr>
-                                                        <td><?php echo $row["id"]; ?></td>
+                                                        
                                                         <td><?php echo $row["show_date"]; ?></td>
                                                         <td><?php echo $row["ticket_price"]; ?></td>
                                                         <td><?php echo $row["no_seat"]; ?></td>
                                                         <td><?php echo $row["movie_name"]; ?></td>
-                                                        <td><?php echo $row["time"]; ?></td>
+                                                        <td><?php echo $row["time"]; ?></td>    
                                                         <td><?php echo $row["name"]; ?></td>
                                                         
                                                         <td>
-                                                            <a href="editseat.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">EDIT</a> |
-                                                            <a href="deleteseat.php?id=" class="btn btn-danger">DELETE</a>
+
+                                                            <a href="editmovieshow.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">EDIT</a> |
+                                                            <a href="deletemovieshow.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">DELETE</a>
                                                         </td>
                                                     </tr>
                                                 <?php

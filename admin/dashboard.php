@@ -18,7 +18,7 @@
                             ?>
                         </div>
                         <div class="col-md-9">
-                        <h3 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >ADMIN DASHBOARD</h3>
+                        <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>ADMIN DASHBOARD</b></h4>
                         </div>
                     </div>
                 </nav>

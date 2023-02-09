@@ -32,7 +32,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >CHI TIẾT GHẾ</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>CHI TIẾT GHẾ</b></h4>
                 
 
                             <table class="table mt-5" border="1">

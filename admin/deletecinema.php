@@ -52,7 +52,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">DELETE CINEMA DETAILS</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;"><b>DELETE CINEMA DETAILS</b></h4>
                             <form method="post">
                 <div class="container-fluid">
                     </div>

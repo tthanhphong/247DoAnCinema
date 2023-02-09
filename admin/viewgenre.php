@@ -25,7 +25,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >THỂ LOẠI</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>THỂ LOẠI</b></h4>
                             <b><a href="addgenre.php" style="color: gray;">ADD THỂ LOẠI</a></b>
 
                             <table class="table mt-5" border="1">

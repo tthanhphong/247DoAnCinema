@@ -25,7 +25,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >NGÔN NGỮ</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" ><b>NGÔN NGỮ</b></h4>
                             <b><a href="addlanguage.php" style="color: gray;">ADD NGÔN NGỮ</a></b>
 
                             <table class="table mt-5" border="1">

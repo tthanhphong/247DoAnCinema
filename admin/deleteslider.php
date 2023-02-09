@@ -49,7 +49,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">UPDATE SLIDER</h5>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;"><b>UPDATE SLIDER</b></h4>
                             <form method="post" enctype="multipart/form-data" class="mt-5">
                                 <div class="container">
                                     

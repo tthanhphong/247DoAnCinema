@@ -25,8 +25,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;">LIÊN HỆ</h5>
-                            <b><a href="addcustomer.php" style="color: gray;">ADD LIÊN HỆ</a></b>
+                            <h4 class="text-center mt-2" style="font-family: Montserrat, sans-serif;"><b>LIÊN HỆ</b></h4>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:#008080;">

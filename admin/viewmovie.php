@@ -19,7 +19,6 @@
 
 
     ?>
-        
             
         <section>
             <nav class="continer-fluid">
@@ -30,7 +29,7 @@
                             ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >PHIMS</h5>
+                            <h5 class="text-center mt-2" style="font-family: Montserrat, sans-serif;" >PHIM</h5>
                             <b><a href="addmovie.php" style="color: gray;">ADD PHIM</a></b>
 
                             <table class="table mt-5" border="1">
@@ -62,7 +61,7 @@
 
                                                         <td>
                                                             <a href="editmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">EDIT</a> |
-                                                            <a href="deletemovie.php?id=" class="btn btn-danger">DELETE</a>
+                                                            <a href="deletemovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">DELETE</a>
                                                         </td>
                                                     </tr>
                                                 <?php

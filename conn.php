@@ -40,7 +40,53 @@ use LDAP\Result;
             $result = $this->conn->query($sql);
             return $result;
         }
-        
+
+        function select_movie_genre(){
+
+            $sql = "SELECT 247cinema.genre.id AS 'genre_id', genre.genre_name 
+            FROM 247cinema.genre;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+
+        function select_movie_industry(){
+
+            $sql = "SELECT 247cinema.industry.id AS 'industry_id', industry.industry_name 
+            FROM 247cinema.industry;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+
+        function select_movie_language(){
+
+            $sql = "SELECT 247cinema.language.id AS 'lang_id', language.language_name 
+            FROM 247cinema.language;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+        function select_show_movie_id(){
+
+            $sql = "SELECT 247cinema.movie.id AS 'movie_id', movie.name 
+            FROM 247cinema.movie;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+        function select_show_show_time_id(){
+
+            $sql = "SELECT 247cinema.show_time.id AS 'show_time_id', show_time.time 
+            FROM 247cinema.show_time;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+        function select_show_cinema_id(){
+
+            $sql = "SELECT 247cinema.cinema.id AS 'cinema_id', cinema.name 
+            FROM 247cinema.cinema;";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
+
+
         function select_show_dt1(){
 
             $sql = "SELECT 247cinema.movie.id, industry.industry_name AS 'industry_name'
@@ -65,6 +111,7 @@ use LDAP\Result;
             $result = $this->conn->query($sql);
             return $result;
         }
+        
 
         function select_movie($table_name, $date){
 
@@ -80,11 +127,13 @@ use LDAP\Result;
         }
 
         function select($table_name, $id){
-
             $sql = "SELECT * FROM $table_name where id = $id";
             $result = $this->conn->query($sql);
             return $result;
         }
+
+
+
         function find($table_name, $tukhoa){
 
             $sql = "SELECT * FROM movie WHERE name LIKE '%".$tukhoa."%'";
